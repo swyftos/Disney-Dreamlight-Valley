@@ -1,4 +1,4 @@
-# DDV Dynamic Modifier - MelonLoader Mod
+# DDV Dynamic Modifier - 
 
 A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds quality-of-life cheats. All features are toggled independently via hotkeys.
 
