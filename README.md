@@ -45,16 +45,6 @@ All features are **OFF** by default after patching. Toggle them individually wit
 
 The mod uses **Harmony patching** on IL2CPP methods at runtime:
 
-- **Free Purchase**: Patches `SpendCurrency`, `SpendCurrencies`, `HasEnoughCurrency`, `HasEnoughCurrencies` on `ProfilePlayer` to skip spending and always report enough currency
-- **Infinite Mana**: Patches `SpendMana`, `HasEnoughMana`, `GetManaCost` to skip mana costs
-- **Pickup Multiplier**: Patches `ContainerInventory.AddItem` to multiply item amounts
-- **Sprint**: Patches `PlayerAvatar.RunSpeedMultiplier` and `GameplaySpeedMultiplier` getters to return higher values while holding Alt
-- **Instant Grow**: Patches `GardeningSlot.GetRemainingTime` and `CanBeHarvested` (experimental)
-
-All patches use the proven IL2CPP Harmony prefix/postfix pattern: `return false` to skip the original method + `ref __result` to set the return value.
-
----
-
 ## Compatibility
 
 - Game: Disney Dreamlight Valley (Steam)
@@ -68,6 +58,7 @@ All patches use the proven IL2CPP Harmony prefix/postfix pattern: `return false`
 - **Patches not applying**: Make sure you're in-game (loaded save) before pressing F8. Check the MelonLoader console for error messages.
 - **Features not working after F8**: Toggle them with their respective hotkeys (F2-F7). They start OFF by default.
 - **Game crashes**: Try enabling fewer features at a time. Disable Instant Grow first as it's experimental.
+- **Other please make a pull request**
 
 ---
 
