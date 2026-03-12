@@ -15,7 +15,7 @@ A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds qual
 | **F3** | Infinite Mana | Actions that cost mana are free |
 | **F4** | Pickup Multiplier | Multiply the amount of items you pick up |
 | **F5** | Cycle Multiplier | Cycle through x2 / x3 / x5 / x10 |
-| **F6** | Instant Grow | Crops and trees grow instantly (experimental) |
+| **F6** | Instant Grow | Crops and trees grow instantly (experimental not working ) |
 | **F7** | Sprint | Hold **Left Alt** while moving to run 3x faster |
 
 All features are **OFF** by default after patching. Toggle them individually with the hotkeys above.
