@@ -1,6 +1,6 @@
-# DDV Dynamic Modifier - 
+# DDV Dynamic Modifier v4.1
 
-A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds quality-of-life cheats. All features are toggled independently via hotkeys.
+A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds quality-of-life cheats with an in-game GUI menu.
 
 **By Swyftos**
 
@@ -8,17 +8,26 @@ A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds qual
 
 ## Features
 
-| Hotkey | Feature | Description |
-|--------|---------|-------------|
-| **F8** | Apply Patches | Must be pressed first when in-game to activate the mod |
-| **F2** | Free Purchase | Buy anything without spending currency (Star Coins / Moonstones) |
-| **F3** | Infinite Mana | Actions that cost mana are free |
-| **F4** | Pickup Multiplier | Multiply the amount of items you pick up |
-| **F5** | Cycle Multiplier | Cycle through x2 / x3 / x5 / x10 |
-| **F6** | Instant Grow | Crops and trees grow instantly (experimental not working ) |
-| **F7** | Sprint | Hold **Left Alt** while moving to run 3x faster ( need testing )  |
+| Feature | Description |
+|---------|-------------|
+| **Free Purchase** | Buy anything without spending currency (Star Coins / Moonstones) |
+| **Infinite Mana** | Actions that cost mana are free |
+| **Pickup Multiplier** | Multiply the amount of items you pick up (x2 / x3 / x5 / x10) |
+| **XP Multiplier** | Multiply XP gained (x2 / x3 / x5 / x10) |
+| **Friendship Multiplier** | Multiply friendship points gained (x2 / x3 / x5 / x10) |
+| **Game Speed** | Speed up the game (hold **Left Alt**) |
+| **Instant Grow** | Crops and trees grow instantly (experimental) |
 
-All features are **OFF** by default after patching. Toggle them individually with the hotkeys above.
+All features are **OFF** by default. Toggle them from the in-game menu.
+
+---
+
+## Controls
+
+| Key | Action |
+|-----|--------|
+| **F8** | Apply Harmony patches (must press first when in-game) |
+| **INSERT** | Toggle the mod menu (GUI overlay) |
 
 ---
 
@@ -37,13 +46,15 @@ All features are **OFF** by default after patching. Toggle them individually wit
    ```
 3. Launch the game
 4. Once in-game (after loading your save), press **F8** to apply patches
-5. Use the hotkeys above to toggle features
+5. Press **INSERT** to open the mod menu and toggle features
 
 ---
 
 ## How It Works
 
-The mod uses **Harmony patching** on IL2CPP methods at runtime:
+The mod uses **Harmony patching** on IL2CPP methods at runtime. Patches are applied on demand (F8) to hook into game methods like `SpendCurrency`, `SpendMana`, `AddItem`, `AddPlayerXp`, `AddFriendship`, and more. An IMGUI-based overlay provides a WeMod-style toggle menu.
+
+---
 
 ## Compatibility
 
@@ -56,9 +67,9 @@ The mod uses **Harmony patching** on IL2CPP methods at runtime:
 ## Troubleshooting
 
 - **Patches not applying**: Make sure you're in-game (loaded save) before pressing F8. Check the MelonLoader console for error messages.
-- **Features not working after F8**: Toggle them with their respective hotkeys (F2-F7). They start OFF by default.
+- **Menu not showing**: Press INSERT to toggle the GUI. Make sure patches were applied first with F8.
 - **Game crashes**: Try enabling fewer features at a time. Disable Instant Grow first as it's experimental.
-- **Other please make a pull request**
+- **Other issues**: Please open an issue or make a pull request.
 
 ---
 
