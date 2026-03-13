@@ -52,7 +52,7 @@ All features are **OFF** by default. Toggle them from the in-game menu.
 
 ## How It Works
 
-The mod uses **Harmony patching** on IL2CPP methods at runtime. Patches are applied on demand (F8) to hook into game methods like `SpendCurrency`, `SpendMana`, `AddItem`, `AddPlayerXp`, `AddFriendship`, and more. An IMGUI-based overlay provides a WeMod-style toggle menu.
+The mod uses **Harmony patching** on IL2CPP methods at runtime. Patches are applied on demand (F8) to hook into game methods like `SpendCurrency`, `SpendMana`, `AddItem`, `AddPlayerXp`, `AddFriendship`, and more. An IMGUI-based overlay provides a  toggle menu.
 
 ---
 
