@@ -72,10 +72,6 @@ The mod uses **Harmony patching** on IL2CPP methods at runtime. Patches are appl
 
 ---
 
-## Changelog
-
-See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full version history.
-
 ---
 
 ## Disclaimer
