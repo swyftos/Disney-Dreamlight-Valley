@@ -87,12 +87,6 @@ An IMGUI-based overlay provides a toggle menu for each feature.
 
 ---
 
-## Changelog
-
-See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full version history.
-
----
-
 ## Disclaimer
 
 This mod is for **single-player / offline use only**. Use at your own risk. The authors are not responsible for any consequences of using this mod.
