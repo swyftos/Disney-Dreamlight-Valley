@@ -12,7 +12,7 @@ A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds qual
 |---------|-------------|
 | **Free Purchase** | Buy anything without spending currency (Star Coins, Moonstones, StoreFront) |
 | **Infinite Mana** | All mana costs are zero |
-| **Free Crafting** | Craft any recipe without needing ingredients |
+| **Free Crafting** | Craft any recipe without needing material |
 | **Pickup Multiplier** | Multiply item pickups (x2 / x3 / x5 / x10) |
 | **Game Speed** | Speed up the game while holding **Left Alt** (x2 / x3 / x5 / x10) |
 | **Skip Cutscenes** | Automatically skips in-game cutscenes at startup |
