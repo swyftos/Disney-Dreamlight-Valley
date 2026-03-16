@@ -1,4 +1,4 @@
-# DDV Dynamic Modifier v4.3
+# DDV Dynamic Modifier v4.5
 
 A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds quality-of-life cheats with an in-game GUI menu.
 
@@ -11,8 +11,9 @@ A MelonLoader mod for **Disney Dreamlight Valley** (IL2CPP Unity) that adds qual
 | Feature | Description |
 |---------|-------------|
 | **Free Purchase** | Buy anything without spending currency (Star Coins, Moonstones, StoreFront) |
-| **Infinite Mana** | Actions that cost mana are free |
-| **Pickup Multiplier** | Multiply the amount of items you pick up (x2 / x3 / x5 / x10) |
+| **Infinite Mana** | All mana costs are zero |
+| **Free Crafting** | Craft any recipe without needing ingredients |
+| **Pickup Multiplier** | Multiply item pickups (x2 / x3 / x5 / x10) |
 | **Game Speed** | Speed up the game while holding **Left Alt** (x2 / x3 / x5 / x10) |
 | **Skip Cutscenes** | Automatically skips in-game cutscenes at startup |
 
@@ -27,6 +28,12 @@ All toggleable features are **OFF** by default. Toggle them from the in-game men
 | **F8** | Apply Harmony patches (must press first when in-game) |
 | **INSERT** | Toggle the mod menu (GUI overlay) |
 | **Left Alt** | Hold for game speed boost (when Game Speed is enabled) |
+
+---
+
+## Screenshots
+
+The mod features a dark-themed in-game overlay with pill-shaped toggles, organized by category (Economy, Multipliers, Gameplay).
 
 ---
 
@@ -51,7 +58,14 @@ All toggleable features are **OFF** by default. Toggle them from the in-game men
 
 ## How It Works
 
-The mod uses **Harmony patching** on IL2CPP methods at runtime. Patches are applied on demand (F8) to hook into game methods like `SpendCurrency`, `SpendMana`, `AddItem`, and more. An IMGUI-based overlay provides a toggle menu for each feature. Cutscene-skip patches are applied automatically at mod startup.
+The mod uses **Harmony patching** on IL2CPP methods at runtime:
+
+- **Economy patches** hook into `SpendCurrency`, `SpendMana`, `HasEnoughCurrency`, `SpendStoreFrontSpecificCurrency` and more
+- **Free Crafting** patches `TryConsumeIngredients`, `GetMissingIngredientCount`, `GetMaxCraftable` on `CraftWithRecipe`
+- **Pickup Multiplier** intercepts `ContainerInventory.AddItem` using `__originalMethod.Invoke` with modified amounts
+- **Skip Cutscenes** patches `DebugSettings` getters at mod startup (no keybind needed)
+
+An IMGUI-based overlay provides a toggle menu for each feature.
 
 ---
 
@@ -67,10 +81,15 @@ The mod uses **Harmony patching** on IL2CPP methods at runtime. Patches are appl
 
 - **Patches not applying**: Make sure you're in-game (loaded save) before pressing F8. Check the MelonLoader console for error messages.
 - **Menu not showing**: Press INSERT to toggle the GUI. Make sure patches were applied first with F8.
+- **Free Crafting not working**: Make sure you toggle it ON in the menu after pressing F8. Note: while enabled, item removal is blocked (disable it when not crafting).
 - **Game crashes**: Try enabling fewer features at a time. Check the MelonLoader console for details.
 - **Other issues**: Please open an issue or make a pull request.
 
 ---
+
+## Changelog
+
+See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full version history.
 
 ---
 
